@@ -26,17 +26,16 @@ public class QuickSort {
 
     static Random aleatorio = new Random();
     static int contIteracoes = 0;
+    static int[] vetor = gerarVetorAleatorio(20, 50);
+    static int[] posicoes = gerarVetorDePosicoes(20);
 
     public static void main(String[] args) {
         
-        //Cria um vetor com 10 números inteiros aleatórios entre 0 e 50
-        int[] vetor = gerarVetorAleatorio(10, 50);
-
-        imprimirVetor(vetor);
-
+        //Cria um vetor com números inteiros aleatórios
         quickSort(vetor, 0, vetor.length - 1);
-
-        imprimirVetor(vetor);
+        
+        System.out.println("\n\n\nVetor Ordenado:");
+        imprimirVetor(vetor,-1,-1);
     }
 
     public static void quickSort(int vetor[], int indexInicial, int indexFinal) {
@@ -46,10 +45,11 @@ public class QuickSort {
         int i = indexInicial;
         int j = indexFinal;
 
-        System.out.println("\nIteração: " + ++contIteracoes);
-        System.out.print("Vetor recebido: ");
-        imprimirVetor(vetor);
+        System.out.println("\n\n\nIteração: " + ++contIteracoes);
         System.out.println("Pivo: " + valorPivo);
+        System.out.println("Vetor recebido:");
+        imprimirVetor(vetor,indexPivo,-1);
+        
 
         while (i < indexPivo && j > indexPivo) {
             while (vetor[j] >= valorPivo && j > indexPivo) {
@@ -59,16 +59,16 @@ public class QuickSort {
                 i++;
             }
             if (i < j) {
-                System.out.println("Trocando: " + vetor[i] + " com " + vetor[j]);
+                System.out.println("\nTrocando: " + vetor[i] + " com " + vetor[j]);
+                imprimirVetor(posicoes,i,j);
+                imprimirVetor(vetor,i,j);
                 aux = vetor[i];
                 vetor[i] = vetor[j];
                 vetor[j] = aux;
+                imprimirVetor(vetor,i,j);
             }
         }
-
-        System.out.print("Vetor entregue: ");
-        imprimirVetor(vetor);
-
+        System.out.println("---Fim da iteração---");
         if (indexInicial < indexPivo - 1) {
             quickSort(vetor, indexInicial, indexPivo - 1);
         }
@@ -77,9 +77,14 @@ public class QuickSort {
         }
     }
     
-    public static void imprimirVetor(int vetor[]) {
+    public static void imprimirVetor(int vetor[],int a, int b) {
         for (int i = 0; i < vetor.length; i++) {
-            System.out.print(vetor[i] + " ");
+            if(i==a || i==b) System.out.print("|");
+            if(vetor[i]<10) System.out.print(" ");
+            System.out.print(vetor[i]);
+            if(i==a || i==b) System.out.print("|");
+            System.out.print(" ");
+            
         }
         System.out.println("");
     }
@@ -93,5 +98,14 @@ public class QuickSort {
 
         return v;
     }
+    
+    public static int[] gerarVetorDePosicoes(int tamanho){
+        int[] v = new int[tamanho];
 
+        for (int i = 0; i < v.length; i++) {
+            v[i] = i;
+        }
+
+        return v;
+    }
 }
