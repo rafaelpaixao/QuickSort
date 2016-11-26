@@ -1,4 +1,3 @@
-
 /*
     Como esse código funciona:
 
@@ -11,11 +10,12 @@
     
     Para cada iteração, são impressos no console:
     - Qual a iteração atual;
-    - Vetor recebido na iteração
+    - Quem é o pivô;
+    - Vetor recebido na iteração;
     - As trocas realizadas;
-    - Vetor resultado da iteração;
+    - Vetor antes da troca;
+    - Vetor depois da troca;
 */
-
 
 
 package quicksort;
@@ -46,7 +46,7 @@ public class QuickSort {
         int j = indexFinal;
 
         System.out.println("\n\n\nIteração: " + ++contIteracoes);
-        System.out.println("Pivo: " + valorPivo);
+        System.out.println("Pivô: " + valorPivo);
         System.out.println("Vetor recebido:");
         imprimirVetor(vetor,indexPivo,-1);
         
