@@ -1,3 +1,23 @@
+
+/*
+    Como esse código funciona:
+
+    Primeiro, crie um vetor de inteiros.
+    Existe uma função que retorna um vetor de inteiros aleatórios,
+    basta informar o tamanho do vetor e a amplitude dos valores.
+    
+    Em seguida, chame a função quickSort passando esse vetor.
+    A função pode realizar até 2 chamadas recurssivas.
+    
+    Para cada iteração, são impressos no console:
+    - Qual a iteração atual;
+    - Vetor recebido na iteração
+    - As trocas realizadas;
+    - Vetor resultado da iteração;
+*/
+
+
+
 package quicksort;
 
 import java.util.Random;
@@ -8,6 +28,8 @@ public class QuickSort {
     static int contIteracoes = 0;
 
     public static void main(String[] args) {
+        
+        //Cria um vetor com 10 números inteiros aleatórios entre 0 e 50
         int[] vetor = gerarVetorAleatorio(10, 50);
 
         imprimirVetor(vetor);
@@ -55,7 +77,6 @@ public class QuickSort {
         }
     }
     
-
     public static void imprimirVetor(int vetor[]) {
         for (int i = 0; i < vetor.length; i++) {
             System.out.print(vetor[i] + " ");
