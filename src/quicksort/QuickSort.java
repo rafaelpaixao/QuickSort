@@ -4,17 +4,31 @@
     Primeiro, crie um vetor de inteiros.
     Existe uma função que retorna um vetor de inteiros aleatórios,
     basta informar o tamanho do vetor e a amplitude dos valores.
-    
-    Em seguida, chame a função quickSort passando esse vetor.
-    A função pode realizar até 2 chamadas recurssivas.
-    
+      
     Para cada iteração, são impressos no console:
     - Qual a iteração atual;
-    - Quem é o pivô;
-    - Vetor recebido na iteração;
+    - Quais as trocas realizadas naquela iteração;
+    - Quais os níveis das chamadas recursivas;
     - As trocas realizadas;
     - Vetor antes da troca;
     - Vetor depois da troca;
+    - Total de iterações;
+    - Total de trocas;
+
+    Referências:
+    ASCENCIO, A. F. G, ARAÚJO, G. S. de. Estrutura de dados: algoritmos,
+    análise da complexidade e implementações em JAVA e C/C++. São Paulo:
+    Pearson Prentice Hall, 2010.
+
+    Desenvolvido por:
+    Lucas Vinícius
+    Rafael Paixão (rafaelsspaixao@gmail.com)
+
+    Para compor avaliação da disciplina Estrutura de Dados I (2016.2),
+    orientado pelo professor Ricardo Sena,
+    bacharelado em Sistemas de Informação - UNIFACS.
+
+    Distribuido como código livre em  https://github.com/rafaelpaixao/QuickSort/
 */
 
 
