@@ -14,4 +14,6 @@ Para compor avaliação da disciplina Estrutura de Dados I (2016.2),
 orientado pelo professor Ricardo Sena,
 bacharelado em Sistemas de Informação - UNIFACS.
 
+Slides: https://github.com/rafaelpaixao/QuickSort/blob/master/Slides%20QuickSort.pdf
+
 Distribuido como código livre em  https://github.com/rafaelpaixao/QuickSort/
